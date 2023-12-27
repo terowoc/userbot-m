@@ -7,7 +7,6 @@ app = Client("AMinbot", api_id=api_id, api_hash=api_hash)
 
 async def main():
     async with app:
-        await app.send_message("me", "Hi!")
-
+        await app.update_profile(bio="Keep up the good work!")
 
 app.run(main())
