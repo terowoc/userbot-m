@@ -18,6 +18,7 @@ keywords = [
 
 @app.on_message()
 async def my_handler(client, message):
+    print(message.chat.id)
     print(f"Received message: {message.text}")
     
     # Check if the message text contains any keyword from the keywords list
