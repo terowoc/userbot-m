@@ -10,6 +10,9 @@ bio = Bio.get_bio()
 
 async def main():
     async with app:
-        await app.update_profile(bio=bio)
+        if file == 0:
+            await app.update_profile(bio=bio)
+            # profile.txt -> 1
+            # 60 -> profile.txt -> 0
         
 app.run(main())
