@@ -12,7 +12,6 @@ bio = Bio.get_bio()
 async def main():
     async with app:
         await app.update_profile(bio=bio)
-        time.sleep(60)
 
 keywords = [
     'oka',
@@ -33,5 +32,7 @@ async def my_handler(client, message):
         await message.forward("me")
     else:
         print("Message does not match keywords.")
+
+    main()
 
 app.run()
