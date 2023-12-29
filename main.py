@@ -14,10 +14,11 @@ keywords = [
     'brother'
 ]
 
+    # await app.update_profile(bio=bio)
+
 @app.on_message()
 async def my_handler(client, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await app.update_profile(bio=bio)
     
     print(f"Received message: {message.text}")
 
