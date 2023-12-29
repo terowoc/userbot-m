@@ -14,7 +14,7 @@ async def main():
 RANDOM = [
     "Abdullox",
     'Abu',
-    'Nmagap'
+    'Nmagap',
 ]
 
 @app.on_message()
