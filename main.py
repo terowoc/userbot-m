@@ -13,6 +13,7 @@ async def main():
 
 keywords = [
     'oka',
+    'brother'
 ]
 
 @app.on_message()
