@@ -32,3 +32,4 @@ async def my_handler(client, message):
         print("Message does not match keywords.")
 
 app.run(main())
+app.run()
