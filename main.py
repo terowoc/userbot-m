@@ -11,18 +11,16 @@ async def main():
     async with app:
         await app.update_profile(bio=bio)
 
-RANDOM = [
-    "Abdullox",
-    'Abu',
-    'Nmagap',
+keywords = [
+    'oka',
 ]
 
 @app.on_message()
 async def my_handler(client, message):
     print(f"Received message: {message.text}")
     
-    # Check if the message text contains any keyword from the RANDOM list
-    if any(keyword.lower() in message.text.lower() for keyword in RANDOM):
+    # Check if the message text contains any keyword from the keywords list
+    if any(keyword.lower() in message.text.lower() for keyword in keywords):
         print("Forwarding message...")
         await message.forward("me")
     else:
