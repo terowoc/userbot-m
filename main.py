@@ -1,5 +1,6 @@
 from pyrogram import Client
 from bios import Bio
+from pyrogram import enums
 
 api_id = 25836645
 api_hash = "7de191651c0201f19bb1451e3b64e5ab"
@@ -19,6 +20,9 @@ keywords = [
 @app.on_message()
 async def my_handler(client, message):
     print(message.chat.id)
+    
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    
     print(f"Received message: {message.text}")
     
     # Check if the message text contains any keyword from the keywords list
